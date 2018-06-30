@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     
+    xmlns:c="http://www.springframework.org/schema/c" 
+    xmlns:p="http://www.springframework.org/schema/p"    
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="  
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">  
+	 <bean name="pp" id="parentPerson" abstract="true"  destroy-method="close"   class="demo.bean.Person">
+        <property name="name" value="parent"/>
+        <property name="age" value="6"/>
+	</bean>
+    <bean id="person" class="demo.bean.Person" parent="pp" name="a, b, c" scope="singleton" destroy-method="close" init-method="init" lazy-init="true" primary="true">
+		<constructor-arg  index="0"  value="青岛"/>
+		<!--实际age等于6，所以parent应该是在对象构造以后起作用-->
+		<constructor-arg  value="15"/>
+        <property name="name" value="xingoo"/>
+        <property name="home" ref="h"/>
+		 <property name="books">
+        <map>
+            <entry key="1" value="钢铁是怎样练成的"></entry>
+            <entry key="2" value="笑傲江湖"></entry>
+            <entry key="3" value="百年孤独"></entry>
+        </map>
+    </property>
+    </bean>
+    <bean id="person2" parent="parentPerson" scope="singleton" init-method="init"  lazy-init="false" p:home-ref="i" p:city="济南">
+        <property name="name" value="xiaoxiao"/>
+    </bean>
+		<!--alias中， d,e不起作用，所以只能将其拆分为两个alias-->
+	<alias name="person" alias="d"/>
+	<alias name="person" alias="e"/>
+	<bean id="address" class="demo.bean.Address">
+        <property name="address" value="东胜神州"/>
+	</bean>
+	<bean id="home" class="demo.bean.Home" name="h" scope="prototype" c:address-ref="address" c:_1="48">
+    </bean>
+	<bean id="home2" class="demo.bean.Home" name="i" c:_0-ref="address" c:num="37">
+    </bean>
+	<!-- 切面类 -->  
+    <bean id="aop" class="demo.bean.aop.Aop"></bean>  
+	 <!-- Aop配置 -->  
+    <aop:config>  
+		<!-- 定义一个切入点表达式： 拦截哪些方法 -->  
+        <aop:pointcut expression="execution(* demo.bean.Person.info(..))" id="pt"/>  
+        <aop:pointcut expression="execution(* demo.bean.Person.booksInfo(..))" id="pt2"/>  
+        <!-- 切面 -->  
+        <aop:aspect ref="aop">    
+            <!-- 环绕通知 -->  
+            <aop:around method="around" pointcut-ref="pt2"/>  
+            <!-- 前置通知： 在目标方法调用前执行 -->  
+            <aop:before method="begin" pointcut-ref="pt"/>  
+            <!-- 后置通知： -->  
+            <aop:after method="after" pointcut-ref="pt"/>  
+            <!-- 返回后通知 -->  
+            <aop:after-returning method="afterReturning" pointcut-ref="pt"/>  
+            <!-- 异常通知 -->  
+            <aop:after-throwing method="afterThrowing" pointcut-ref="pt"/> 
+        </aop:aspect>  
+    </aop:config> 
+</beans>

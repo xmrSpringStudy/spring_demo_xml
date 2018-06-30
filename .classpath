@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-aop-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-aspects-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-beans-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-build-src-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-context-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-context-support-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-core-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-expression-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-framework-bom-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-instrument-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-instrument-tomcat-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-jdbc-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-jms-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-orm-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-oxm-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-struts-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-test-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-tx-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-web-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-webmvc-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/spring/spring-webmvc-portlet-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/common/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/common/aspectjweaver-1.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/common/com.springsource.com.mchange.v2.c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/common/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/xumingxsh/program/github/springStudy/spring_demo_xml/libs/common/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
